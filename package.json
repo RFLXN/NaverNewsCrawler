@@ -1,0 +1,29 @@
+{
+  "name": "naver-news-crawler",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "prestart": "yarn run build",
+    "start": "node dist/main.js",
+    "lint": "eslint ./src/** --fix"
+  },
+  "dependencies": {
+    "@json2csv/plainjs": "^7.0.5",
+    "cheerio": "^1.0.0-rc.12",
+    "cli-progress": "^3.12.0",
+    "puppeteer": "^21.11.0"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^1.5.4",
+    "@types/cli-progress": "^3.11.5",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0",
+    "eslint": "^8.56.0",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3"
+  }
+}
